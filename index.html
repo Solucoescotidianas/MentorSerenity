@@ -6,7 +6,6 @@
 
 <title>Assinatura Estelar - Guru Serenity</title>
 
-<!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- META PIXEL -->
@@ -20,7 +19,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', 'SEU_PIXEL_AQUI');
+fbq('init', '895763309864065');
 fbq('track', 'PageView');
 </script>
 
@@ -28,8 +27,8 @@ fbq('track', 'PageView');
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    background: radial-gradient(circle, #0f2f2f, #071a1a);
-    color: #fff;
+    background: radial-gradient(circle, #000000, #0d001a);
+    color: #ffffff;
 }
 
 h1, h2 {
@@ -37,86 +36,60 @@ h1, h2 {
 }
 
 .container {
-    padding: 40px 20px;
+    padding: 50px 20px;
     max-width: 1100px;
     margin: auto;
     text-align: center;
 }
 
-.hero {
-    padding-top: 60px;
-}
-
 .hero h1 {
-    font-size: 2.4rem;
-    color: gold;
+    font-size: 2.6rem;
+    background: linear-gradient(90deg, gold, silver, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .sub {
-    opacity: 0.9;
-    margin-top: 10px;
+    opacity: 0.85;
 }
 
-.video {
-    margin: 30px auto;
-    max-width: 500px;
+.video video {
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(199,125,255,0.4);
 }
 
 .mockup {
-    width: 220px;
-    height: 320px;
-    margin: auto;
-    border: 2px solid gold;
-    box-shadow: 0 0 20px gold;
+    width: 230px;
+    height: 330px;
+    margin: 30px auto;
     border-radius: 12px;
+    background: linear-gradient(145deg, #111, #1a0033);
+    border: 1px solid gold;
+    box-shadow: 0 0 25px gold, 0 0 15px #c77dff;
 }
 
-/* CONTADOR */
 .timer {
-    font-size: 1.5rem;
-    color: gold;
+    font-size: 1.6rem;
     margin: 20px 0;
+    color: #c77dff;
 }
 
-/* BOTÃO */
 .cta a {
-    background: gold;
-    color: #000;
-    padding: 15px 30px;
-    text-decoration: none;
+    background: linear-gradient(90deg, gold, #c77dff);
+    color: black;
+    padding: 16px 32px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
+    text-decoration: none;
     display: inline-block;
-    margin-top: 20px;
+    transition: 0.3s;
 }
 
-/* PROVA SOCIAL */
-.testimonials {
-    display: grid;
-    gap: 20px;
+.cta a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #c77dff;
 }
 
-.testimonial {
-    border: 1px solid gold;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* CHAT */
-.chatbot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #0f2f2f;
-    border: 1px solid gold;
-    padding: 15px;
-    border-radius: 10px;
-    width: 260px;
-    display: none;
-    box-shadow: 0 0 15px gold;
-}
-
-/* ANIMAÇÃO */
 .fade {
     opacity: 0;
     transform: translateY(30px);
@@ -127,16 +100,44 @@ h1, h2 {
     opacity: 1;
     transform: translateY(0);
 }
+
+.card {
+    border: 1px solid rgba(255,255,255,0.2);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.03);
+}
+
+.testimonial {
+    border: 1px solid silver;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: rgba(255,255,255,0.04);
+}
+
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0d001a;
+    border: 1px solid #c77dff;
+    padding: 15px;
+    border-radius: 12px;
+    width: 260px;
+    display: none;
+    box-shadow: 0 0 20px #c77dff;
+}
 </style>
 </head>
 
 <body>
 
 <section class="hero container">
-    <h1>O código invisível do seu nascimento foi ativado</h1>
-    <p class="sub">A maioria das pessoas vive desconectada do próprio mapa energético… você não precisa ser uma delas.</p>
+    <h1>Seu código estelar foi ativado</h1>
+    <p class="sub">Existe uma frequência única que governa sua vida… hoje você vai acessá-la.</p>
 
-    <!-- VSL -->
     <div class="video">
         <video width="100%" autoplay muted loop>
             <source src="https://cdn.coverr.co/videos/coverr-mystic-energy-5171/1080p.mp4" type="video/mp4">
@@ -148,91 +149,90 @@ h1, h2 {
     <div class="timer" id="timer"></div>
 
     <div class="cta">
-        <a href="https://pay.kiwify.com.br/Y3Iirpz" onclick="fbq('track','InitiateCheckout')">
+        <a href="https://pay.kiwify.com.br/Y3Iirpz"
+           onclick="fbq('track','InitiateCheckout')">
         Desbloquear Minha Assinatura Estelar
         </a>
     </div>
 </section>
 
 <section class="container fade">
-    <h2>Não é astrologia comum</h2>
-    <p>
-        É a decodificação da sua frequência vibracional através da inteligência artificial.
-        Um reflexo direto da sua essência.
-    </p>
+    <h2>O espelho da sua alma</h2>
+    <p>Não é astrologia comum. É a leitura da sua frequência energética.</p>
 </section>
 
 <section class="container fade">
-    <h2>Você vai receber</h2>
+    <h2>O que será revelado</h2>
 
-    <p>☀️ Essência Solar</p>
-    <p>🌙 Mundo Interior</p>
-    <p>⬆️ Caminho Ascendente</p>
-    <p>🔮 Conselho 2026</p>
+    <div class="card">☀️ Essência Solar</div>
+    <div class="card">🌙 Mundo Interior</div>
+    <div class="card">⬆️ Caminho Ascendente</div>
+    <div class="card">🔮 Conselho 2026</div>
 
     <div class="cta">
-        <a href="https://pay.kiwify.com.br/Y3Iirpz">Quero acessar agora</a>
+        <a href="https://pay.kiwify.com.br/Y3Iirpz"
+           onclick="fbq('track','InitiateCheckout')">
+        Quero acessar agora
+        </a>
     </div>
 </section>
 
 <section class="container fade">
-    <h2>Pessoas já estão despertando</h2>
+    <h2>Relatos reais</h2>
 
-    <div class="testimonials">
-        <div class="testimonial">"Parece que foi feito pra mim. Assustadoramente preciso."</div>
-        <div class="testimonial">"Nunca entendi tanto sobre mim em minutos."</div>
-        <div class="testimonial">"Mudou minha forma de ver decisões."</div>
-    </div>
+    <div class="testimonial">"Senti como se alguém tivesse lido minha alma."</div>
+    <div class="testimonial">"Extremamente preciso e profundo."</div>
+    <div class="testimonial">"Não esperava algo tão forte."</div>
 </section>
 
-<!-- CHATBOT -->
+<!-- CHAT -->
 <div class="chatbot" id="chatbot">
     <p id="chatText"></p>
 </div>
 
 <script>
-// CONTADOR
+// TIMER
 let time = 600;
 setInterval(() => {
-    let min = Math.floor(time / 60);
-    let sec = time % 60;
+    let m = Math.floor(time/60);
+    let s = time%60;
     document.getElementById("timer").innerText =
-    `Oferta expira em ${min}:${sec < 10 ? '0' : ''}${sec}`;
+    `Oferta encerra em ${m}:${s<10?'0':''}${s}`;
     time--;
-}, 1000);
+},1000);
 
-// ANIMAÇÃO
+// SCROLL
 const fades = document.querySelectorAll('.fade');
 window.addEventListener('scroll', () => {
     fades.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 50) {
+        if(el.getBoundingClientRect().top < window.innerHeight-50){
             el.classList.add('show');
         }
     });
 });
 
-// CHATBOT
-const messages = [
-    "Sinto algo forte vindo do seu mapa...",
-    "Seu padrão energético está pronto para ser revelado...",
-    "Você chegou aqui por um motivo...",
-    "A sua prosperidade começa com esse passo..."
+// CHAT
+const msgs = [
+"Estou sentindo sua energia daqui...",
+"Seu mapa tem algo raro...",
+"Você chegou no momento certo...",
+"Sua frequência está despertando..."
 ];
 
-setTimeout(() => {
-    const chat = document.getElementById('chatbot');
-    const text = document.getElementById('chatText');
-    chat.style.display = 'block';
+setTimeout(()=>{
+    let chat = document.getElementById('chatbot');
+    let txt = document.getElementById('chatText');
+    chat.style.display='block';
 
-    let i = 0;
-    text.innerText = messages[i];
+    let i=0;
+    txt.innerText=msgs[i];
 
-    setInterval(() => {
-        i = (i + 1) % messages.length;
-        text.innerText = messages[i];
-    }, 4000);
+    setInterval(()=>{
+        i=(i+1)%msgs.length;
+        txt.innerText=msgs[i];
+    },4000);
 
-}, 3000);
+},3000);
 </script>
 
 </body>
