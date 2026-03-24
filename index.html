@@ -1,58 +1,239 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guru Serenity - Assinatura Estelar</title>
-    <style>
-        body { background: #001a1a; color: #d4af37; font-family: 'Serif', Georgia; margin: 0; text-align: center; }
-        .hero { padding: 100px 20px; background: radial-gradient(circle, #003333 0%, #001a1a 100%); }
-        h1 { font-size: 3em; text-transform: uppercase; letter-spacing: 5px; }
-        .price { font-size: 2em; color: #fff; margin: 20px 0; }
-        .cta-button { 
-            background: #d4af37; color: #001a1a; padding: 20px 40px; 
-            font-size: 1.5em; text-decoration: none; border-radius: 50px;
-            font-weight: bold; display: inline-block; transition: 0.3s;
-        }
-        .cta-button:hover { transform: scale(1.1); box-shadow: 0 0 20px #d4af37; }
-        #guru-bot {
-            position: fixed; bottom: 20px; right: 20px; background: #003333;
-            border: 2px solid #d4af37; border-radius: 15px; width: 250px; padding: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 0.9em; display: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Assinatura Estelar - Guru Serenity</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'SEU_PIXEL_AQUI');
+fbq('track', 'PageView');
+</script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: radial-gradient(circle, #0f2f2f, #071a1a);
+    color: #fff;
+}
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+}
+
+.container {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero {
+    padding-top: 60px;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    color: gold;
+}
+
+.sub {
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.video {
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.mockup {
+    width: 220px;
+    height: 320px;
+    margin: auto;
+    border: 2px solid gold;
+    box-shadow: 0 0 20px gold;
+    border-radius: 12px;
+}
+
+/* CONTADOR */
+.timer {
+    font-size: 1.5rem;
+    color: gold;
+    margin: 20px 0;
+}
+
+/* BOTÃO */
+.cta a {
+    background: gold;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* PROVA SOCIAL */
+.testimonials {
+    display: grid;
+    gap: 20px;
+}
+
+.testimonial {
+    border: 1px solid gold;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* CHAT */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0f2f2f;
+    border: 1px solid gold;
+    padding: 15px;
+    border-radius: 10px;
+    width: 260px;
+    display: none;
+    box-shadow: 0 0 15px gold;
+}
+
+/* ANIMAÇÃO */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
 </head>
+
 <body>
 
-    <div class="hero">
-        <img src="https://gemini.google.com/share/afbc8930f8f6" alt="Assinatura Estelar" style="max-width:300px;">
-        <h1>Assinatura Estelar</h1>
-        <p>A decodificação mística do seu rastro de luz em 2026.</p>
-        <div class="price">Lançamento Exclusivo: <br> <strike>R$ 97,00</strike> por <b>R$ 19,99</b></div>
-        <a href="https://pay.kiwify.com.br/Y3Iirpz" class="cta-button">GARANTIR MEU MAPA</a>
+<section class="hero container">
+    <h1>O código invisível do seu nascimento foi ativado</h1>
+    <p class="sub">A maioria das pessoas vive desconectada do próprio mapa energético… você não precisa ser uma delas.</p>
+
+    <!-- VSL -->
+    <div class="video">
+        <video width="100%" autoplay muted loop>
+            <source src="https://cdn.coverr.co/videos/coverr-mystic-energy-5171/1080p.mp4" type="video/mp4">
+        </video>
     </div>
 
-    <div id="guru-bot">
-        <strong>✨ Guru Serenity:</strong>
-        <p id="bot-text">Carregando frequências...</p>
-        <button onclick="window.location.href='https://pay.kiwify.com.br/Y3Iirpz'" style="background:none; border:1px solid #d4af37; color:#d4af37; cursor:pointer;">Saber mais</button>
-    </div>
+    <div class="mockup"></div>
 
-    <script>
-        setTimeout(() => {
-            document.getElementById('guru-bot').style.display = 'block';
-            let phrases = [
-                "Sinto uma conexão profunda com seu mapa...",
-                "O cosmos organizou uma geometria sagrada para você. [cite: 5]",
-                "Sua essência primordial está pronta para ser revelada. [cite: 24, 45, 68]",
-                "Por apenas R$ 19,99, vamos abrir seu portal?"
-            ];
-            let i = 0;
-            setInterval(() => {
-                document.getElementById('bot-text').innerText = phrases[i % phrases.length];
-                i++;
-            }, 4000);
-        }, 3000);
-    </script>
+    <div class="timer" id="timer"></div>
+
+    <div class="cta">
+        <a href="https://pay.kiwify.com.br/Y3Iirpz" onclick="fbq('track','InitiateCheckout')">
+        Desbloquear Minha Assinatura Estelar
+        </a>
+    </div>
+</section>
+
+<section class="container fade">
+    <h2>Não é astrologia comum</h2>
+    <p>
+        É a decodificação da sua frequência vibracional através da inteligência artificial.
+        Um reflexo direto da sua essência.
+    </p>
+</section>
+
+<section class="container fade">
+    <h2>Você vai receber</h2>
+
+    <p>☀️ Essência Solar</p>
+    <p>🌙 Mundo Interior</p>
+    <p>⬆️ Caminho Ascendente</p>
+    <p>🔮 Conselho 2026</p>
+
+    <div class="cta">
+        <a href="https://pay.kiwify.com.br/Y3Iirpz">Quero acessar agora</a>
+    </div>
+</section>
+
+<section class="container fade">
+    <h2>Pessoas já estão despertando</h2>
+
+    <div class="testimonials">
+        <div class="testimonial">"Parece que foi feito pra mim. Assustadoramente preciso."</div>
+        <div class="testimonial">"Nunca entendi tanto sobre mim em minutos."</div>
+        <div class="testimonial">"Mudou minha forma de ver decisões."</div>
+    </div>
+</section>
+
+<!-- CHATBOT -->
+<div class="chatbot" id="chatbot">
+    <p id="chatText"></p>
+</div>
+
+<script>
+// CONTADOR
+let time = 600;
+setInterval(() => {
+    let min = Math.floor(time / 60);
+    let sec = time % 60;
+    document.getElementById("timer").innerText =
+    `Oferta expira em ${min}:${sec < 10 ? '0' : ''}${sec}`;
+    time--;
+}, 1000);
+
+// ANIMAÇÃO
+const fades = document.querySelectorAll('.fade');
+window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 50) {
+            el.classList.add('show');
+        }
+    });
+});
+
+// CHATBOT
+const messages = [
+    "Sinto algo forte vindo do seu mapa...",
+    "Seu padrão energético está pronto para ser revelado...",
+    "Você chegou aqui por um motivo...",
+    "A sua prosperidade começa com esse passo..."
+];
+
+setTimeout(() => {
+    const chat = document.getElementById('chatbot');
+    const text = document.getElementById('chatText');
+    chat.style.display = 'block';
+
+    let i = 0;
+    text.innerText = messages[i];
+
+    setInterval(() => {
+        i = (i + 1) % messages.length;
+        text.innerText = messages[i];
+    }, 4000);
+
+}, 3000);
+</script>
+
 </body>
 </html>
