@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru Serenity - Assinatura Estelar</title>
+    <style>
+        body { background: #001a1a; color: #d4af37; font-family: 'Serif', Georgia; margin: 0; text-align: center; }
+        .hero { padding: 100px 20px; background: radial-gradient(circle, #003333 0%, #001a1a 100%); }
+        h1 { font-size: 3em; text-transform: uppercase; letter-spacing: 5px; }
+        .price { font-size: 2em; color: #fff; margin: 20px 0; }
+        .cta-button { 
+            background: #d4af37; color: #001a1a; padding: 20px 40px; 
+            font-size: 1.5em; text-decoration: none; border-radius: 50px;
+            font-weight: bold; display: inline-block; transition: 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.1); box-shadow: 0 0 20px #d4af37; }
+        #guru-bot {
+            position: fixed; bottom: 20px; right: 20px; background: #003333;
+            border: 2px solid #d4af37; border-radius: 15px; width: 250px; padding: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 0.9em; display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <img src="https://gemini.google.com/share/afbc8930f8f6" alt="Assinatura Estelar" style="max-width:300px;">
+        <h1>Assinatura Estelar</h1>
+        <p>A decodificação mística do seu rastro de luz em 2026.</p>
+        <div class="price">Lançamento Exclusivo: <br> <strike>R$ 97,00</strike> por <b>R$ 19,99</b></div>
+        <a href="https://pay.kiwify.com.br/Y3Iirpz" class="cta-button">GARANTIR MEU MAPA</a>
+    </div>
+
+    <div id="guru-bot">
+        <strong>✨ Guru Serenity:</strong>
+        <p id="bot-text">Carregando frequências...</p>
+        <button onclick="window.location.href='https://pay.kiwify.com.br/Y3Iirpz'" style="background:none; border:1px solid #d4af37; color:#d4af37; cursor:pointer;">Saber mais</button>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('guru-bot').style.display = 'block';
+            let phrases = [
+                "Sinto uma conexão profunda com seu mapa...",
+                "O cosmos organizou uma geometria sagrada para você. [cite: 5]",
+                "Sua essência primordial está pronta para ser revelada. [cite: 24, 45, 68]",
+                "Por apenas R$ 19,99, vamos abrir seu portal?"
+            ];
+            let i = 0;
+            setInterval(() => {
+                document.getElementById('bot-text').innerText = phrases[i % phrases.length];
+                i++;
+            }, 4000);
+        }, 3000);
+    </script>
+</body>
+</html>
