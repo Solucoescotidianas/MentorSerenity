@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seu Código Estelar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background: black;
+    color: white;
+    font-family: Raleway;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-family: Cinzel;
+    color: gold;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    background: linear-gradient(90deg, gold, #c77dff);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Responda e revele seu padrão energético</h1>
+
+<div id="quiz"></div>
+
+<script>
+const perguntas = [
+{
+q: "Você sente que sua vida está:",
+a: ["Travada", "Em transição", "Alinhada"]
+},
+{
+q: "Sua maior busca hoje é:",
+a: ["Dinheiro", "Propósito", "Equilíbrio emocional"]
+},
+{
+q: "Você acredita em energia?",
+a: ["Sim", "Mais ou menos", "Quero descobrir"]
+}
+];
+
+let atual = 0;
+
+function render() {
+    let html = `<h2>${perguntas[atual].q}</h2>`;
+    perguntas[atual].a.forEach(res => {
+        html += `<button onclick="next()">${res}</button>`;
+    });
+    document.getElementById("quiz").innerHTML = html;
+}
+
+function next() {
+    atual++;
+    if (atual < perguntas.length) {
+        render();
+    } else {
+        window.location.href = "resultado.html";
+    }
+}
+
+render();
+</script>
+
+</body>
+</html>
