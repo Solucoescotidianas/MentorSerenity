@@ -44,44 +44,45 @@ h1, h2 {
 
 /* HEADLINE */
 .hero h1 {
-    font-size: 2.6rem;
+    font-size: 2.7rem;
     background: linear-gradient(90deg, gold, silver, #c77dff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* TEXTO */
+/* SUB */
 .sub {
     opacity: 0.9;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 1.1rem;
 }
 
-/* ALERTA */
+/* ALERT */
 .alert {
     color: #c77dff;
     margin-top: 20px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 /* VIDEO */
 video {
     margin-top: 25px;
     border-radius: 12px;
-    box-shadow: 0 0 20px #c77dff;
+    box-shadow: 0 0 25px rgba(199,125,255,0.5);
 }
 
 /* TIMER */
 .timer {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: gold;
     margin: 20px 0;
 }
 
-/* BOTÃO */
+/* CTA */
 .cta a {
     background: linear-gradient(90deg, gold, #c77dff);
     color: black;
-    padding: 16px 30px;
+    padding: 16px 32px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
@@ -95,9 +96,9 @@ video {
     box-shadow: 0 0 20px #c77dff;
 }
 
-/* SEÇÕES */
+/* SECTIONS */
 .section {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 /* CARDS */
@@ -136,10 +137,12 @@ video {
 
 <section class="hero container">
 
-<h1>Seu código estelar foi ativado</h1>
+<h1>
+Existe um padrão invisível que está controlando sua vida… e ele começou no momento em que você nasceu
+</h1>
 
 <p class="sub">
-Existe algo no seu mapa que normalmente não é revelado…
+A maioria das pessoas nunca descobre isso… mas quando descobre, tudo muda
 </p>
 
 <p class="alert">
@@ -152,8 +155,8 @@ Existe algo no seu mapa que normalmente não é revelado…
 
 <div class="timer" id="timer"></div>
 
-<p>
-Responda 3 perguntas rápidas e descubra seu padrão oculto
+<p style="color:#c77dff;">
+Responda 3 perguntas rápidas e veja o que está oculto no seu mapa
 </p>
 
 <div class="cta">
@@ -161,16 +164,6 @@ Responda 3 perguntas rápidas e descubra seu padrão oculto
 Descobrir Meu Código Estelar
 </a>
 </div>
-
-</section>
-
-<section class="container section">
-
-<h2>Não é astrologia comum</h2>
-
-<p>
-É a leitura da sua frequência energética… algo que a maioria nunca acessa.
-</p>
 
 </section>
 
@@ -214,9 +207,9 @@ time--;
 // CHAT
 const msgs = [
 "Isso não apareceu por acaso...",
-"Seu mapa está tentando se revelar...",
+"Seu mapa tem algo que raramente é revelado...",
 "Poucas pessoas chegam até aqui...",
-"Você está pronto para ver?"
+"Você está pronto para ver a verdade?"
 ];
 
 setTimeout(()=>{
