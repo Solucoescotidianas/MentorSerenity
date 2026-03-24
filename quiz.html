@@ -1,81 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seu Código Estelar</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway&display=swap" rel="stylesheet">
-
-<style>
-body {
-    background: black;
-    color: white;
-    font-family: Raleway;
-    text-align: center;
-    padding: 40px;
-}
-
-h1 {
-    font-family: Cinzel;
-    color: gold;
-}
-
-button {
-    display: block;
-    margin: 10px auto;
-    padding: 15px;
-    width: 80%;
-    background: linear-gradient(90deg, gold, #c77dff);
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Estelar - Quiz</title>
+    <style>
+        body { background: #001a1a; color: #d4af37; font-family: 'Georgia', serif; text-align: center; padding: 50px 20px; }
+        .quiz-container { max-width: 500px; margin: auto; background: rgba(0, 51, 51, 0.8); padding: 30px; border: 1px solid #d4af37; border-radius: 15px; }
+        .step { display: none; }
+        .step.active { display: block; }
+        button { background: #d4af37; color: #001a1a; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 5px; cursor: pointer; margin-top: 20px; font-weight: bold; width: 100%; }
+        .loader { border: 4px solid #003333; border-top: 4px solid #d4af37; border-radius: 50%; width: 40px; height: 40px; animation: spin 2s linear infinite; margin: 20px auto; display: none; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
 </head>
-
 <body>
 
-<h1>Responda e revele seu padrão energético</h1>
+<div class="quiz-container">
+    <div class="step active" id="step1">
+        <h2>1. Você sente que o universo tem tentado falar com você através de sinais?</h2>
+        <button onclick="nextStep(2)">Sim, frequentemente</button>
+        <button onclick="nextStep(2)">Às vezes, mas tenho dúvidas</button>
+    </div>
 
-<div id="quiz"></div>
+    <div class="step" id="step2">
+        <h2>2. Qual desses mais ressoa com sua alma agora?</h2>
+        <button onclick="nextStep(3)">Busca por Prosperidade</button>
+        <button onclick="nextStep(3)">Paz Espiritual</button>
+    </div>
+
+    <div class="step" id="step3">
+        <h2>3. Você está pronto para encarar a verdade oculta no seu rastro de luz?</h2>
+        <button onclick="startAnalysis()">Sim, estou pronto(a)</button>
+    </div>
+
+    <div id="loading-area" style="display:none;">
+        <h2 id="status-text">Guru Serenity está decodificando sua frequência...</h2>
+        <div class="loader" id="main-loader" style="display:block;"></div>
+    </div>
+
+    <div id="result" style="display:none;">
+        <h2 style="color:#fff;">Frequência Localizada!</h2>
+        <p>Sua geometria sagrada indica um grande portal de mudança em 2026. Para liberar sua Assinatura Estelar completa e o conselho do Guru:</p>
+        <button onclick="window.location.href='https://pay.kiwify.com.br/Y3Iirpz'">ACESSAR MEU MAPA AGORA (R$ 19,99)</button>
+    </div>
+</div>
 
 <script>
-const perguntas = [
-{
-q: "Você sente que sua vida está:",
-a: ["Travada", "Em transição", "Alinhada"]
-},
-{
-q: "Sua maior busca hoje é:",
-a: ["Dinheiro", "Propósito", "Equilíbrio emocional"]
-},
-{
-q: "Você acredita em energia?",
-a: ["Sim", "Mais ou menos", "Quero descobrir"]
-}
-];
-
-let atual = 0;
-
-function render() {
-    let html = `<h2>${perguntas[atual].q}</h2>`;
-    perguntas[atual].a.forEach(res => {
-        html += `<button onclick="next()">${res}</button>`;
-    });
-    document.getElementById("quiz").innerHTML = html;
-}
-
-function next() {
-    atual++;
-    if (atual < perguntas.length) {
-        render();
-    } else {
-        window.location.href = "resultado.html";
+    function nextStep(step) {
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        document.getElementById('step' + step).classList.add('active');
     }
-}
 
-render();
+    function startAnalysis() {
+        document.getElementById('step3').classList.remove('active');
+        document.getElementById('loading-area').style.display = 'block';
+        
+        let texts = [
+            "Conectando com as correntes eletromagnéticas...",
+            "Calculando posição do Sol e da Lua...",
+            "Quase lá... Alinhando rastro de luz de 2026..."
+        ];
+        let i = 0;
+        let interval = setInterval(() => {
+            if(i < texts.length) {
+                document.getElementById('status-text').innerText = texts[i];
+                i++;
+            } else {
+                clearInterval(interval);
+                document.getElementById('loading-area').style.display = 'none';
+                document.getElementById('result').style.display = 'block';
+            }
+        }, 2500);
+    }
 </script>
 
 </body>
